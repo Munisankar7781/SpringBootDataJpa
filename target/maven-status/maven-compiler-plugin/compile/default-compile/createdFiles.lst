@@ -1,6 +1,0 @@
-com\ms\Service\IcustomerService.class
-com\ms\Service\CustomerServiceImpl.class
-com\ms\Entity\Customer.class
-com\ms\JpaCrudRepo1Application.class
-com\ms\Repository\ICustomerRepo.class
-com\ms\Runner\CustRunner.class
