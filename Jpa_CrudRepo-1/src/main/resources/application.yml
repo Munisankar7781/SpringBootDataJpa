@@ -20,10 +20,10 @@
 
 org:
     cust:
-        customer-name: NTR
-        customer-address: DEVARA
-        customer-bill: 877.77
-        gst: 65432.88
+        customer-name: Hello
+        customer-address: pune
+        customer-bill: 41.6
+        gst: 0.45
 ---
 
 # For MYSQL DATABASE
