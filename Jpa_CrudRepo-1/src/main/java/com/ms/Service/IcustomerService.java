@@ -1,16 +1,14 @@
 package com.ms.Service;
 
 import com.ms.Entity.Customer;
-
 import java.util.List;
 
 public interface IcustomerService {
 
-
-
     // Insert Opertions in Crud Repository.
     public String registerCustomer(Customer customer);
 
+    public String registerAllCustomers(List<Customer> customers);
 
 
       // Select Operations In Crud Repository.
@@ -32,5 +30,12 @@ public interface IcustomerService {
     public String DeleteCustomer(Customer customer);
 
     public String deleteAllCustomers();
+
+    // update operations
+    // NOTE : IN CRUD REPOSITORY there is no seperate Method for the Update Operations.
+    public String updateCustomer(Customer customer);
+
+    public String partialUpdateCustomer(Integer id, String name, String address);
+
 
 }

@@ -30,4 +30,8 @@ public class Customer {
     @Column(name = "cust_gst")
     private Float gst;
 
+    @Transient
+    @Column(name = "hotel_name")
+    private String hotelName;
+
 }

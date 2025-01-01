@@ -10,5 +10,4 @@ public class  JpaCrudRepo1Application {
 
         SpringApplication.run(JpaCrudRepo1Application.class, args);
     }
-
 }
