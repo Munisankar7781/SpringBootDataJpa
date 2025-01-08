@@ -1,0 +1,18 @@
+#spring.application.name=JPA Repository
+
+# For MYSQL DATABASE
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///data_jpa
+    username: root
+    password: root
+    hikari:
+      maximum-pool-size: 100000
+      minimum-idle: 2000
+      keepalive-time: 10000000
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
