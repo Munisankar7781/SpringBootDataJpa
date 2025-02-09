@@ -31,5 +31,4 @@ public class Asus {
     private String version;
 
     private Float price;
-
 }

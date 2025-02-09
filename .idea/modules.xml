@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Finder Methods/FinderMethods.iml" filepath="$PROJECT_DIR$/Finder Methods/FinderMethods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JPA Repository/JPARepository.iml" filepath="$PROJECT_DIR$/JPA Repository/JPARepository.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/SpringBootDataJpa.iml" filepath="$PROJECT_DIR$/.idea/SpringBootDataJpa.iml" />
     </modules>
   </component>

@@ -2,28 +2,76 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true" />
+      <profile default="true" name="Default" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath>
+          <entry name="$PROJECT_DIR$" />
+        </processorPath>
+      </profile>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Jpa_CrudRepo-1" />
       </profile>
-      <profile name="Annotation profile for Pagination and Sortinng" enabled="true">
+      <profile name="Annotation profile for PaginationAndSortingRepository" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
+        </processorPath>
+        <module name="PaginationAndSortingRepository" />
+      </profile>
+      <profile name="Annotation profile for JPA Repository" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
         </processorPath>
-        <module name="PaginationSorting1" />
+        <module name="JPARepository" />
+      </profile>
+      <profile name="Annotation profile for Finder Methods" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
+        </processorPath>
+        <module name="FinderMethods" />
+      </profile>
+      <profile name="Annotation profile for Tm_OneToMany_Unidirc" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
+        </processorPath>
+        <module name="Query" />
+        <module name="TImeversioning" />
+        <module name="Tm_OneToMany_Unidirc" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="OneToMany_UNI_DIRC" target="17" />
+      <module name="PaginationSorting1" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="FinderMethods" options="-parameters" />
+      <module name="JPARepository" options="-parameters" />
       <module name="Jpa_CrudRepo-1" options="-parameters" />
+      <module name="OneToMany_UNI_DIRC" options="-parameters" />
+      <module name="PaginationAndSortingRepository" options="-parameters" />
       <module name="PaginationSorting1" options="-parameters" />
+      <module name="Query" options="-parameters" />
+      <module name="TImeversioning" options="-parameters" />
+      <module name="Tm_OneToMany_Unidirc" options="-parameters" />
     </option>
   </component>
 </project>

@@ -6,7 +6,19 @@
       <list>
         <option value="$PROJECT_DIR$/Jpa_CrudRepo-1/pom.xml" />
         <option value="$PROJECT_DIR$/Pagination and Sortinng/pom.xml" />
+        <option value="$PROJECT_DIR$/PaginationAndSortingRepository/pom.xml" />
+        <option value="$PROJECT_DIR$/JPA Repository/pom.xml" />
+        <option value="$PROJECT_DIR$/Finder Methods/pom.xml" />
+        <option value="$PROJECT_DIR$/Query/pom.xml" />
+        <option value="$PROJECT_DIR$/TImeversioning/pom.xml" />
+        <option value="$PROJECT_DIR$/ManyToOne_UNI_DIRC/pom.xml" />
+        <option value="$PROJECT_DIR$/Tm_OneToMany_Unidirc/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/ManyToOne_UNI_DIRC/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
