@@ -8,6 +8,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.prefs.BackingStoreException;
 
 @Component
 public class PersonRunner implements CommandLineRunner {
@@ -46,12 +47,9 @@ public class PersonRunner implements CommandLineRunner {
 //            throw new RuntimeException(e);
 //        }
 
-
         try {
-
             List<Object[]> person = personService.findAllPerson();
             if (person != null && !person.isEmpty()) {
-
                 person.forEach(row -> {
                     for (Object rowData : row) {
                         System.out.print(rowData + "   ");
@@ -61,7 +59,6 @@ public class PersonRunner implements CommandLineRunner {
             } else {
                 System.out.println("NO PERSON DATA FOUND");
             }
-
         } catch (Exception e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
@@ -79,6 +76,36 @@ public class PersonRunner implements CommandLineRunner {
                     System.out.println();
                 });
             }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
+
+        System.out.println("==========================================================");
+
+        try {
+            List<Person> person = personService.loadParentPerson();
+            if (person != null && !person.isEmpty()) {
+                person.forEach(per -> {
+                    System.out.println("Parent::::" + per);
+                    List<BankAccounts> bankAccounts = per.getBankAccounts();
+                    if (bankAccounts != null && !bankAccounts.isEmpty()) {
+                        bankAccounts.forEach(bankAccount -> {
+                            System.out.println("Child::::" + bankAccount);
+                        });
+                    }
+                });
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
+
+        System.out.println("==========================================================");
+
+        try {
+            String message = personService.deletePersonById(20L);
+            System.out.println(message);
         } catch (Exception e) {
             System.out.println(e.getMessage());
             e.printStackTrace();

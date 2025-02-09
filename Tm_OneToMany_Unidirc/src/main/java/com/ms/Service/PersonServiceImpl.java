@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.OptionalDouble;
 
 @Service
 public class PersonServiceImpl implements IPersonService {
@@ -30,16 +32,29 @@ public class PersonServiceImpl implements IPersonService {
 
     @Override
     public List<Object[]> findAllPerson() {
-
         return personAccountRepo.fetchallPersons();
-
     }
 
     @Override
     public List<Object[]> findAllPersonByBankName(String bankName) {
-
         return personAccountRepo.fetchAllByBankAccounts(bankName);
     }
 
+    @Override
+    public List<Person> loadParentPerson() {
+        return personAccountRepo.findAll();
+    }
 
+    @Override
+    public String deletePersonById(Long id) {
+
+        Optional<Person> opt = personAccountRepo.findById(id);
+
+        if (opt.isPresent()) {
+            personAccountRepo.delete(opt.get());
+            return "Person deleted successfully" + opt.get().getPid();
+        } else {
+            return "Person not found";
+        }
+    }
 }

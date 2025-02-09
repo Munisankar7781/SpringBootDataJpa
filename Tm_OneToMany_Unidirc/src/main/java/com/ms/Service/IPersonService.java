@@ -11,4 +11,8 @@ public interface IPersonService {
     public List<Object[]> findAllPerson();
 
     public List<Object[]> findAllPersonByBankName(String bankName);
+
+    public List<Person> loadParentPerson();
+
+    public String deletePersonById(Long id);
 }

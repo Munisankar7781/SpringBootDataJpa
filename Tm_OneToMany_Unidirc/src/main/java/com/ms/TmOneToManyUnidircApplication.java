@@ -7,8 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TmOneToManyUnidircApplication {
 
     public static void main(String[] args) {
-
         SpringApplication.run(TmOneToManyUnidircApplication.class, args);
     }
-
 }
